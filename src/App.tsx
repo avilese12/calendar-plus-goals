@@ -1,4 +1,5 @@
 import { Calendar } from './Calendar'
+import { Goals } from './Goals'
 import { Header } from './Header'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
     <Header />
     <Calendar />
+    <Goals />
     </>
   )
 }
