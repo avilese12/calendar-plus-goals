@@ -1,28 +1,69 @@
 .header {
-    display: grid;
-    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 0px;
+  place-items: center;
 }
 
 .month {
-    margin: 10px;
+  margin: 10px;
+  height: max-content;
 }
 
-h1 {
-    font-family:Arial, Helvetica, sans-serif
+h1,
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 td {
-    padding: 3px;
+  padding: 3px;
 }
 i {
-    color: red;
+  color: red;
 }
 
 .passed {
-    color: lightgrey;
+  color: lightgrey;
 }
 
 .goals {
-    display: grid;
-    place-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+th {
+  width: 20px;
+  font-size: 12px;
+}
+td {
+  height: 20px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.strikethrough {
+  position: relative;
+  display: inline-block;
+}
+
+.strikethrough::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s ease-in-out;
+}
+
+.strikethrough.struck::after {
+  width: 100%;
 }
