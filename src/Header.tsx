@@ -5,6 +5,7 @@ import {
 } from "./util";
 import "./styles.css";
 import { Timer } from "./Timer";
+import { TimePieChart } from "./TimePieChart";
 
 export const Header = () => {
   const [initialMsLeft] = useState(() => getTimeLeftInYearInMilliseconds());
@@ -45,6 +46,7 @@ export const Header = () => {
       </div>
       <div>
         <h2> {currentTime.toLocaleDateString()}</h2>
+        <TimePieChart />
       </div>
     </div>
   );
